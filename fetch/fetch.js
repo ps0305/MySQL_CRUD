@@ -1,7 +1,5 @@
-import { request } from "https";
-
 //import connection
-var conn =require("./config/db_connection");
+var conn =require("../config/db_connection");
 
 //setting the connection object
 var conn = connection.getConnection();
@@ -23,7 +21,7 @@ request.get("/" ,function(req,res){
         }else{
             res.send(recordArray);
         }
-    })
-})
+    });
+});
 //export the router
 module.exports=router;

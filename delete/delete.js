@@ -17,7 +17,7 @@ router.post("/",function(req,res){
     var p_id=req.body.p_id;
     
 
-    connection.query("delete from product where p_id="p_id,
+    connection.query("delete from product where p_id" =p_id,
     function(err){
         if (err){
             console.log("error while deleting the data !");
