@@ -10,7 +10,7 @@ app.use("/fetch"/fetch);
 app.use(bodyparser.JSON()); //set JSON as MIME type
 app.use(bodyparser.urlencoded({extended:false})); //front-end not sending any form data
 var insert = require("./insert/insert");
-app.use("/insert,insert");
+app.use("insert",insert);
 app.use("update",update);
 app.use("delete",remove);
 app.listen(8080);

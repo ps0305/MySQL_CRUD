@@ -1,8 +1,8 @@
 //import connection
-var conn =require("../config/db_connection");
+var connection =require("../config/db_connection");
 
 //setting the connection object
-var conn = connection.getConnection();
+var conn=connection.getConnection();
 
 //connect to database
 connection.connect();
