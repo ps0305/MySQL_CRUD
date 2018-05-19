@@ -15,11 +15,11 @@ var router=express.Router();
 
 //get request
 router.get("/" ,function(req,res){
-    connection.query("select * from products", function(err,recordArray,fields){
+    connection.query("select * from products", function(err,recordsArray,fields){
         if (err){
             console.log("Error occured while fetching the data !")
         }else{
-            res.send(recordArray);
+            res.send(recordsArray);
         }
     });
 });
