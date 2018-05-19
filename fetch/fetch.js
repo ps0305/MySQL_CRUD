@@ -1,8 +1,8 @@
 //import connection
-var connection =require("../config/db_connection");
+var conn =require("../config/db_connection");
 
 //setting the connection object
-var conn=connection.getConnection();
+var connection=conn.getConnection();
 
 //connect to database
 connection.connect();
@@ -14,7 +14,7 @@ var express=require("express");
 var router=express.Router();
 
 //get request
-request.get("/" ,function(req,res){
+router.get("/" ,function(req,res){
     connection.query("select * from products", function(err,recordArray,fields){
         if (err){
             console.log("Error occured while fetching the data !")
