@@ -13,7 +13,7 @@ connection.connect();
 //create the module(Router)
 var router = express.Router;
 router.post("/",function(req,res){
-    //reading the parameters from client
+//reading the parameters from client
     var p_id=req.body.p_id;
     var p_name=req.body.p_name;
     var p_cost=req.body.p_cost;
@@ -27,3 +27,5 @@ router.post("/",function(req,res){
         }
     });
 });
+//export router
+module.exports=router;
