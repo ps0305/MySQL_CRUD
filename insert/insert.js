@@ -1,8 +1,8 @@
 //import express module
 var express = require("express");
 
-//import connection 
-var conn = require("connection");
+//import connection moule
+var conn= require("../config/db_connection");
 
 //getting the connection object
 var connection =conn.getConnection();
@@ -11,7 +11,7 @@ var connection =conn.getConnection();
 connection.connect();
 
 //create the module(Router)
-var router = express.Router;
+var router = express.Router();
 router.post("/",function(req,res){
 //reading the parameters from client
     var p_id=req.body.p_id;

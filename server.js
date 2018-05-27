@@ -5,10 +5,10 @@ var bodyparser= require("body-parser");
 
 //create app instance
 var app=express();
-app.use("/fetch"/fetch);
+app.use("/fetch",fetch);
 
 //set JSON as MIME type
-app.use(bodyparser.JSON());
+app.use(bodyparser.json());
 
 //front-end not sending any form data
 app.use(bodyparser.urlencoded({extended:false}));
