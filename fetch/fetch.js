@@ -1,27 +1,26 @@
-//import connection
-var conn =require("../config/db_connection");
+const conn = require("../config/db_connection");
 
-//setting the connection object
-var connection=conn.getConnection();
+// setting the connection object
+let connection = conn.getConnection();
 
-//connect to database
+// connect to database
 connection.connect();
 
-//import express
-var express=require("express");
+// import express
+const express = require("express");
 
-//create the router
-var router=express.Router();
+// create the router
+let router = express.Router();
 
 //get request
-router.get("/" ,function(req,res){
-    connection.query("select * from products", function(err,recordsArray,fields){
-        if (err){
+router.get("/" , function(req, res) {
+    connection.query("select * from products", function(err, recordsArray, fields) {
+        if (err) {
             console.log("Error occured while fetching the data !")
-        }else{
+        } else {
             res.send(recordsArray);
         }
     });
 });
-//export the router
-module.exports=router;
+
+module.exports = router;
